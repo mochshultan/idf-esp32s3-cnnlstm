@@ -2,6 +2,9 @@
 #define MPU6050_DRIVER_H
 
 #include "config.h"
+#include "esp_err.h"
+#include "driver/i2c.h"
+#include "esp_log.h"
 
 // MPU6050 Register addresses
 #define MPU6050_REG_PWR_MGMT_1    0x6B

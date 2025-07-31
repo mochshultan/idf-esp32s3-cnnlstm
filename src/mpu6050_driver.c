@@ -1,6 +1,6 @@
 #include "mpu6050_driver.h"
 
-static const char* TAG = "MPU6050";
+// static const char* TAG = "MPU6050";
 
 esp_err_t mpu6050_i2c_init(void) {
     i2c_config_t conf = {
