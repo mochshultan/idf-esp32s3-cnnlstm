@@ -61,11 +61,22 @@
 #define MPU6050_QUEUE_SIZE 10
 #define INFERENCE_QUEUE_SIZE 5
 
-// Error codes
+// Error codes (only define if not already defined by ESP-IDF)
+#ifndef ESP_OK
 #define ESP_OK 0
+#endif
+
+#ifndef ESP_ERR_INVALID_ARG
 #define ESP_ERR_INVALID_ARG -1
+#endif
+
+#ifndef ESP_ERR_NO_MEM
 #define ESP_ERR_NO_MEM -2
+#endif
+
+#ifndef ESP_ERR_TIMEOUT
 #define ESP_ERR_TIMEOUT -3
+#endif
 
 // Class labels
 extern const char* CLASS_LABELS[NUM_CLASSES];

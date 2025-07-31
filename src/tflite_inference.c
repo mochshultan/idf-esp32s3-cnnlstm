@@ -1,7 +1,7 @@
 #include "tflite_inference.h"
 #include "fall_detection_model.h"
 
-static const char* TAG = "TFLITE";
+// static const char* TAG = "TFLITE";  // Unused for now
 
 // Global variables
 data_buffer_t g_data_buffer = {0};
@@ -34,7 +34,7 @@ const char* CLASS_LABELS[NUM_CLASSES] = {
 void* tflite_allocate_tensor_arena(size_t size) {
     if (size > TENSOR_ARENA_SIZE) {
         DEBUG_ERROR("Tensor arena size too large: %zu > %d", size, TENSOR_ARENA_SIZE);
-        return nullptr;
+        return NULL;
     }
     return tensor_arena;
 }
@@ -311,7 +311,7 @@ void print_sensor_data(const mpu6050_data_t* data) {
 
 void print_data_buffer_status(void) {
     DEBUG_PRINT("Data Buffer Status:");
-    DEBUG_PRINT("  Index: %u/%u", g_data_buffer.index, INPUT_SEQUENCE_LENGTH);
+    DEBUG_PRINT("  Index: %lu/%u", (unsigned long)g_data_buffer.index, INPUT_SEQUENCE_LENGTH);
     DEBUG_PRINT("  Is Full: %s", g_data_buffer.is_full ? "Yes" : "No");
     DEBUG_PRINT("  Last Update: %llu", g_data_buffer.last_update);
 }
