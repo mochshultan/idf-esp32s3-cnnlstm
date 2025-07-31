@@ -5,8 +5,8 @@
 esp_err_t mpu6050_i2c_init(void) {
     i2c_config_t conf = {
         .mode = I2C_MODE_MASTER,
-        .sda_io_num = MPU6050_SDA_PIN,
-        .scl_io_num = MPU6050_SCL_PIN,
+        .sda_io_num = 8,
+        .scl_io_num = 9,
         .sda_pullup_en = GPIO_PULLUP_ENABLE,
         .scl_pullup_en = GPIO_PULLUP_ENABLE,
         .master.clk_speed = MPU6050_I2C_FREQ,

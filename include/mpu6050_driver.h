@@ -18,7 +18,7 @@
 #define MPU6050_REG_WHO_AM_I      0x75
 
 // MPU6050 Configuration values
-#define MPU6050_WHO_AM_I_VALUE    0x68
+#define MPU6050_WHO_AM_I_VALUE    0x70
 #define MPU6050_ACCEL_FS_2G       0x00
 #define MPU6050_ACCEL_FS_4G       0x08
 #define MPU6050_ACCEL_FS_8G       0x10
