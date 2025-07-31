@@ -9,12 +9,12 @@ inference_result_t g_last_result = {0};
 
 // TensorFlow Lite Micro objects (placeholder for now)
 // In a full implementation, you would use the actual TensorFlow Lite objects
-// static tflite::MicroErrorReporter micro_error_reporter;
-// static tflite::ErrorReporter* error_reporter = &micro_error_reporter;
-// static const tflite::Model* model = nullptr;
-// static tflite::MicroInterpreter* interpreter = nullptr;
-// static TfLiteTensor* input = nullptr;
-// static TfLiteTensor* output = nullptr;
+static tflite::MicroErrorReporter micro_error_reporter;
+static tflite::ErrorReporter* error_reporter = &micro_error_reporter;
+static const tflite::Model* model = nullptr;
+static tflite::MicroInterpreter* interpreter = nullptr;
+static TfLiteTensor* input = nullptr;
+static TfLiteTensor* output = nullptr;
 
 // Tensor arena for model execution (aligned for ESP32-S3)
 static uint8_t tensor_arena[TENSOR_ARENA_SIZE] __attribute__((aligned(16)));
