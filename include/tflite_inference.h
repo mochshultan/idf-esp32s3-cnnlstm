@@ -4,11 +4,12 @@
 #include "config.h"
 #include "mpu6050_driver.h"
 
-// TensorFlow Lite Micro includes
-#include "tensorflow/lite/micro/all_ops_resolver.h"
-#include "tensorflow/lite/micro/micro_error_reporter.h"
-#include "tensorflow/lite/micro/micro_interpreter.h"
-#include "tensorflow/lite/schema/schema_generated.h"
+// TensorFlow Lite Micro includes (placeholder for now)
+// In a full implementation, you would include the actual TensorFlow Lite headers
+// #include "tensorflow/lite/micro/all_ops_resolver.h"
+// #include "tensorflow/lite/micro/micro_error_reporter.h"
+// #include "tensorflow/lite/micro/micro_interpreter.h"
+// #include "tensorflow/lite/schema/schema_generated.h"
 
 // Model configuration
 #define TENSOR_ARENA_SIZE (1024 * 1024)  // 1MB for tensor arena
